@@ -1,0 +1,46 @@
+{
+  "name": "shopify-graphql",
+  "version": "1.0.0",
+  "description": "A library for Shopify GraphQL query recommendations",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "dev": "tsup --watch",
+    "clean": "rm -rf lib",
+    "prepublishOnly": "yarn clean && yarn build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trannam110702/shopify-graphql.git"
+  },
+  "author": "root1107",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trannam110702/shopify-graphql/issues"
+  },
+  "homepage": "https://github.com/trannam110702/shopify-graphql#readme",
+  "packageManager": "yarn@4.9.4",
+  "dependencies": {
+    "@shopify/graphql-client": "^1.4.1",
+    "graphql": "^16.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}
